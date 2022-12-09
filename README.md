@@ -1,5 +1,8 @@
 # ConFusion
 
+Started server json-server --watch db.json
+json-server --watch db.json -d 2000 //atraso de 2 segundos para retorno da solicitação
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 ## Development server

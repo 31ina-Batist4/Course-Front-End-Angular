@@ -1,0 +1,16 @@
+@mixin zero-margin(pad-up-down, pad-left-right) {
+    margin: 0px auto;
+    padding: pad-up-down pad-left-right;
+}
+
+.jumbotron {
+    font-weight: bold;
+    padding: 70px 30px;
+    background:  #9575CD;
+    color:floralwhite;
+    min-height: 150px;
+    margin: 0px auto;
+}
+.active{
+    background: #4527a0;
+}

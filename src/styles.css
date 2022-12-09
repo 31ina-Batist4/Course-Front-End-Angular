@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import '../node_modules/font-awesome/css/font-awesome.css';
+/*$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+*/
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+.highlight {
+  background-color:#D1C4E9;
+  border: 1px solid #512DA8;
+  z-index: 1;
+  transform: scale(1.01);
+   /* primary-color-dark */
+}
+.container {
+    margin: 20px;
+    display: flex;
+}
+
+@mixin zero-margin(pad-up-down, pad-left-right) {
+    margin: 0px auto;
+    padding: pad-up-down pad-left-right;
+}
+
+.background-primary {
+    background-color: #512DA8!important;
+  }
+.background-accent {
+    background-color: #FFC107!important;
+  }
+.text-floral-white {
+    color: floralwhite!important;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}

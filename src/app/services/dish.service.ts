@@ -38,6 +38,7 @@ export class DishService {
     return this.getDishes().pipe(map(dishes => dishes.map(dish => dish.id)))
      .pipe(catchError(error => error));
   }
+  
   putDish(dish: Dish): Observable<Dish> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -49,3 +50,4 @@ export class DishService {
   }
   
 }
+ 

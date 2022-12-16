@@ -26,14 +26,14 @@ import { Comment } from '../shared/comment';
 })
 export class DishdetailComponent implements OnInit {
 
-  dish: any = Dish;
-  errMess: string;
-  dishIds: string[];
   prev: string;
   next: string;
   commentForm: FormGroup;
   comment: Comment;
+  dishIds: string[];
   dishcopy: Dish;
+  dish: any = Dish;
+  errMess: string; 
   @ViewChild('fform') commentFormDirective;
   visibility ='shown';
 

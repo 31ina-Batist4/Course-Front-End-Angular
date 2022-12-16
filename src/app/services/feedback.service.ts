@@ -19,24 +19,16 @@ export class FeedbackService {
     return this.http.get<Feedback[]>(baseURL + 'feedback')
     .pipe(catchError(this.processHttpMsgService.handleError));
   }
-  
-  getFeedback(id: string): Observable<Feedback> {
-    return this.http.get<Feedback>(baseURL + 'feedback/' + id)
-    .pipe(catchError(this.processHttpMsgService.handleError));
- }
 
- getFeedbacksIds(): Observable<string[] | any>{
-  return this.getFeedbacks().pipe(map(feedbacks => feedbacks.map(feedback => feedback.id)))
-  .pipe(catchError(error => error)); 
-} 
 
-postFeedback(feedback: Feedback): Observable<Feedback>{
+submitFeedback(feedback: Feedback): Observable<Feedback>{
   const httpOptions = {
-        headers: new HttpHeaders({
-          'Content-Type': 'application/json'
-        })
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
   };
-  return this.http.post<Feedback>(baseURL + 'feedback/' + feedback, httpOptions)
+  return this.http.post<Feedback>(baseURL + 'feedback/', feedback, httpOptions)
   .pipe(catchError(this.processHttpMsgService.handleError));
+
 }
 }
